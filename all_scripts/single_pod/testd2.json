@@ -1,0 +1,17 @@
+{
+    "metadata": {
+                "name": "ping2"
+            
+    },
+    "image":{
+        "image": "docker.io/celtak/ubuntu-ping-ip"        
+        },
+        "command": [
+                    "/bin/sh"
+                
+        ],
+        "log_path":"/1.log",
+        "linux": {
+        }
+      
+}

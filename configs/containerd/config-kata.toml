@@ -1,0 +1,47 @@
+root = "/home/t4/containerd"
+state = "/run/containerd"
+oom_score = -999
+
+[metrics]
+  address = ""
+  grpc_histogram = false
+
+[cgroup]
+  path = ""
+
+[plugins]
+  [plugins.cri]
+    stats_collect_period = 2147483647
+    max_container_log_line_size = 16384
+    [plugins.cri.containerd]
+      disable_snapshot_annotations = false
+      disable_parse_username = true
+      default_runtime_name = "kata"
+      [plugins.cri.containerd.default_runtime]
+        runtime_type = "io.containerd.runtime.v1.linux"
+      [plugins.cri.containerd.runtimes.kata]
+        runtime_type = "io.containerd.kata3.v2"
+        [plugins.cri.containerd.runtimes.kata.options]
+          ConfigPath = "/etc/kata-containers/configuration-qemu-3.toml"
+      [plugins.cri.containerd.runtimes.kata-fc]
+        runtime_type = "io.containerd.kata2.v2"
+        [plugins.cri.containerd.runtimes.kata-fc.options]
+          ConfigPath = "/etc/kata-containers/configuration-fc.toml"
+      [plugins.cri.containerd.runtimes.kata-template]
+        runtime_type = "io.containerd.kata25.v2"
+        [plugins.cri.containerd.runtimes.kata-template.options]
+          ConfigPath = "/etc/kata-containers/configuration-template-25.toml"
+      [plugins.cri.containerd.runtimes.rund]
+        runtime_type = "io.containerd.rund.v2"
+        [plugins.cri.containerd.runtimes.rund.options]
+          ConfigPath = "/etc/kata-containers/configuration.toml"
+      [plugins.cri.containerd.runtimes.rundopen]
+        runtime_type = "io.containerd.rundopen.v2"
+        [plugins.cri.containerd.runtimes.rundopen.options]
+          ConfigPath = "/etc/kata-containers/configuration-rund-open.toml"
+    [plugins.cri.cni]
+      bin_dir = "/opt/cni/bin"
+      conf_dir = "/etc/cni/net.d"
+      conf_template = ""
+  [plugins.linux]
+    shim_debug = true

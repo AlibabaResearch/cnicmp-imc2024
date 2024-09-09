@@ -1,0 +1,17 @@
+{
+    "metadata": {
+                "name": "ping"
+            
+    },
+    "image":{
+        "image": "docker.io/donch/net-tools"        
+        },
+        "command": [
+                    "sleep", "1000"
+                
+        ],
+        "log_path":"/0.log",
+        "linux": {
+        }
+      
+}

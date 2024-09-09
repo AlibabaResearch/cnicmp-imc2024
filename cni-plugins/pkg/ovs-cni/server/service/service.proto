@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package service;
+
+service OVSPortService {
+    rpc CreateInternalPort (PortRequest) returns (PortResponse) {}
+}
+
+message PortRequest {
+    string brName = 1;
+    string portName = 2;
+    string portMac = 3;
+    uint32 vlanTag = 4;
+    uint32 mtu = 5;
+    bool doSetUp = 6;
+}
+
+message PortResponse {
+    bool success = 1;
+}

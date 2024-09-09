@@ -1,0 +1,17 @@
+{
+    "metadata": {
+                "name": "net-test2"
+            
+    },
+    "image":{
+        "image": "docker.io/lyz/net-test"        
+        },
+        "command": [
+                    "sleep", "1000"
+                
+        ],
+        "log_path":"/0.log",
+        "linux": {
+        }
+      
+}

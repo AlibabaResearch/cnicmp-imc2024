@@ -1,0 +1,14 @@
+{
+    "metadata": {
+                "name": "perf1"
+            
+    },
+    "image":{
+        "image": "lyz/cni-net-test-2"        
+        },
+        "command": [
+                    "sleep", "10000000"
+                
+        ],
+        "log_path":"/1.log"
+}

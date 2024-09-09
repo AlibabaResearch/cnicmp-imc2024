@@ -1,0 +1,312 @@
+{
+  "status": {
+    "id": "2a2f2fef8f0daed55b476edede6cf57acd1bbc51f8c23424d087a25130ed7807",
+    "metadata": {
+      "attempt": 1,
+      "name": "sandbox-036",
+      "namespace": "test",
+      "uid": "busybox-sandbox"
+    },
+    "state": "SANDBOX_READY",
+    "createdAt": "2023-07-10T10:51:41.060193413+08:00",
+    "network": {
+      "additionalIps": [
+        {
+          "ip": "2001:4860:4860::af87"
+        }
+      ],
+      "ip": "10.88.7.72"
+    },
+    "linux": {
+      "namespaces": {
+        "options": {
+          "ipc": "POD",
+          "network": "POD",
+          "pid": "POD"
+        }
+      }
+    },
+    "labels": {},
+    "annotations": {},
+    "runtimeHandler": "rund"
+  },
+  "info": {
+    "pid": 6356,
+    "processStatus": "running",
+    "netNamespaceClosed": false,
+    "image": "k8s.gcr.io/pause@sha256:f78411e19d84a252e53bff71a4407a5686c46983a2c2eeed83929b888179acea",
+    "snapshotKey": "2a2f2fef8f0daed55b476edede6cf57acd1bbc51f8c23424d087a25130ed7807",
+    "snapshotter": "overlayfs",
+    "runtimeHandler": "rund",
+    "runtimeType": "io.containerd.kata.v2",
+    "runtimeOptions": {
+      "config_path": "/opt/kata/share/defaults/kata-containers/configuration-dragonball.toml"
+    },
+    "config": {
+      "metadata": {
+        "name": "sandbox-036",
+        "uid": "busybox-sandbox",
+        "namespace": "test",
+        "attempt": 1
+      },
+      "log_directory": "/tmp/pod_test",
+      "linux": {
+        "security_context": {
+          "namespace_options": {}
+        }
+      }
+    },
+    "runtimeSpec": {
+      "ociVersion": "1.0.1-dev",
+      "process": {
+        "user": {
+          "uid": 0,
+          "gid": 0
+        },
+        "args": [
+          "/pause"
+        ],
+        "env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "cwd": "/",
+        "capabilities": {
+          "bounding": [
+            "CAP_CHOWN",
+            "CAP_DAC_OVERRIDE",
+            "CAP_FSETID",
+            "CAP_FOWNER",
+            "CAP_MKNOD",
+            "CAP_NET_RAW",
+            "CAP_SETGID",
+            "CAP_SETUID",
+            "CAP_SETFCAP",
+            "CAP_SETPCAP",
+            "CAP_NET_BIND_SERVICE",
+            "CAP_SYS_CHROOT",
+            "CAP_KILL",
+            "CAP_AUDIT_WRITE"
+          ],
+          "effective": [
+            "CAP_CHOWN",
+            "CAP_DAC_OVERRIDE",
+            "CAP_FSETID",
+            "CAP_FOWNER",
+            "CAP_MKNOD",
+            "CAP_NET_RAW",
+            "CAP_SETGID",
+            "CAP_SETUID",
+            "CAP_SETFCAP",
+            "CAP_SETPCAP",
+            "CAP_NET_BIND_SERVICE",
+            "CAP_SYS_CHROOT",
+            "CAP_KILL",
+            "CAP_AUDIT_WRITE"
+          ],
+          "inheritable": [
+            "CAP_CHOWN",
+            "CAP_DAC_OVERRIDE",
+            "CAP_FSETID",
+            "CAP_FOWNER",
+            "CAP_MKNOD",
+            "CAP_NET_RAW",
+            "CAP_SETGID",
+            "CAP_SETUID",
+            "CAP_SETFCAP",
+            "CAP_SETPCAP",
+            "CAP_NET_BIND_SERVICE",
+            "CAP_SYS_CHROOT",
+            "CAP_KILL",
+            "CAP_AUDIT_WRITE"
+          ],
+          "permitted": [
+            "CAP_CHOWN",
+            "CAP_DAC_OVERRIDE",
+            "CAP_FSETID",
+            "CAP_FOWNER",
+            "CAP_MKNOD",
+            "CAP_NET_RAW",
+            "CAP_SETGID",
+            "CAP_SETUID",
+            "CAP_SETFCAP",
+            "CAP_SETPCAP",
+            "CAP_NET_BIND_SERVICE",
+            "CAP_SYS_CHROOT",
+            "CAP_KILL",
+            "CAP_AUDIT_WRITE"
+          ]
+        },
+        "noNewPrivileges": true,
+        "oomScoreAdj": -998
+      },
+      "root": {
+        "path": "rootfs",
+        "readonly": true
+      },
+      "mounts": [
+        {
+          "destination": "/proc",
+          "type": "proc",
+          "source": "proc",
+          "options": [
+            "nosuid",
+            "noexec",
+            "nodev"
+          ]
+        },
+        {
+          "destination": "/dev",
+          "type": "tmpfs",
+          "source": "tmpfs",
+          "options": [
+            "nosuid",
+            "strictatime",
+            "mode=755",
+            "size=65536k"
+          ]
+        },
+        {
+          "destination": "/dev/pts",
+          "type": "devpts",
+          "source": "devpts",
+          "options": [
+            "nosuid",
+            "noexec",
+            "newinstance",
+            "ptmxmode=0666",
+            "mode=0620",
+            "gid=5"
+          ]
+        },
+        {
+          "destination": "/dev/shm",
+          "type": "tmpfs",
+          "source": "shm",
+          "options": [
+            "nosuid",
+            "noexec",
+            "nodev",
+            "mode=1777",
+            "size=65536k"
+          ]
+        },
+        {
+          "destination": "/dev/mqueue",
+          "type": "mqueue",
+          "source": "mqueue",
+          "options": [
+            "nosuid",
+            "noexec",
+            "nodev"
+          ]
+        },
+        {
+          "destination": "/sys",
+          "type": "sysfs",
+          "source": "sysfs",
+          "options": [
+            "nosuid",
+            "noexec",
+            "nodev",
+            "ro"
+          ]
+        },
+        {
+          "destination": "/dev/shm",
+          "type": "bind",
+          "source": "/run/containerd/io.containerd.grpc.v1.cri/sandboxes/2a2f2fef8f0daed55b476edede6cf57acd1bbc51f8c23424d087a25130ed7807/shm",
+          "options": [
+            "rbind",
+            "ro"
+          ]
+        }
+      ],
+      "annotations": {
+        "io.kubernetes.cri.container-type": "sandbox",
+        "io.kubernetes.cri.sandbox-id": "2a2f2fef8f0daed55b476edede6cf57acd1bbc51f8c23424d087a25130ed7807",
+        "io.kubernetes.cri.sandbox-log-directory": "/tmp/pod_test"
+      },
+      "linux": {
+        "resources": {
+          "devices": [
+            {
+              "allow": false,
+              "access": "rwm"
+            }
+          ],
+          "cpu": {
+            "shares": 2
+          }
+        },
+        "cgroupsPath": "/k8s.io/2a2f2fef8f0daed55b476edede6cf57acd1bbc51f8c23424d087a25130ed7807",
+        "namespaces": [
+          {
+            "type": "pid"
+          },
+          {
+            "type": "ipc"
+          },
+          {
+            "type": "uts"
+          },
+          {
+            "type": "mount"
+          },
+          {
+            "type": "network",
+            "path": "/var/run/netns/cni-7986ebd6-edd7-d8da-b85a-fb5410db3ea9"
+          }
+        ],
+        "maskedPaths": [
+          "/proc/acpi",
+          "/proc/asound",
+          "/proc/kcore",
+          "/proc/keys",
+          "/proc/latency_stats",
+          "/proc/timer_list",
+          "/proc/timer_stats",
+          "/proc/sched_debug",
+          "/sys/firmware",
+          "/proc/scsi"
+        ],
+        "readonlyPaths": [
+          "/proc/bus",
+          "/proc/fs",
+          "/proc/irq",
+          "/proc/sys",
+          "/proc/sysrq-trigger"
+        ]
+      }
+    },
+    "cniResult": {
+      "Interfaces": {
+        "eth0": {
+          "IPConfigs": [
+            {
+              "IP": "10.88.7.72",
+              "Gateway": "10.88.0.1"
+            },
+            {
+              "IP": "2001:4860:4860::af87",
+              "Gateway": "2001:4860:4860::8889"
+            }
+          ],
+          "Mac": "9c:c2:c4:2b:32:16",
+          "Sandbox": "/var/run/netns/cni-7986ebd6-edd7-d8da-b85a-fb5410db3ea9"
+        }
+      },
+      "DNS": [
+        {},
+        {}
+      ],
+      "Routes": [
+        {
+          "dst": "0.0.0.0/0"
+        },
+        {
+          "dst": "::/0"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "metadata": {
+                  "name": "nginx-sandbox",
+                  "namespace": "default",
+                  "attempt": 1,
+                  "uid": "hdishd83djaidwnduwk28bcsb"
+              
+    },
+              "logDirectory": "/tmp/pod_test",
+        "linux": {
+            "security_context": {
+                "namespace_options":{
+                    "network": 2
+                }
+            }
+        }
+      
+}

@@ -1,0 +1,10 @@
+metadata:
+  name: net-test
+  namespace: test
+  uid: busybox-sandbox
+  attempt: 1
+log_directory: /tmp/pod_test
+linux:
+  security_context:
+    namespace_options:
+      network: 1
